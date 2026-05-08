@@ -1,8 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import { GraduationCap, Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 
 const quickLinks = [
+  { href: "/about", label: "About Us" },
   { href: "/courses", label: "Programs" },
+  { href: "/events", label: "Events & News" },
+  { href: "/blog", label: "Blog" },
   { href: "/admissions", label: "Admissions" },
   { href: "/faculty", label: "Faculty" },
   { href: "/contact", label: "Contact" },

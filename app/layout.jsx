@@ -2,6 +2,7 @@ import "@/styles.css";
 import { Inter, Outfit } from "next/font/google";
 import { Header } from "@/Header/Header";
 import { Footer } from "@/Footer/Footer";
+import { WhatsAppButton } from "@/shared/WhatsAppButton";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-display" });
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <WhatsAppButton />
         </div>
       </body>
     </html>

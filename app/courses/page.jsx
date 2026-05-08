@@ -1,133 +1,54 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import {
-  Activity,
-  BookMarked,
+  BookOpen,
   Briefcase,
   Clock,
   FlaskConical,
-  HeartPulse,
-  Microscope,
+  Home,
   Pill,
-  ScanLine,
-  Stethoscope,
   Users,
 } from "lucide-react";
 
 import { PageHero } from "@/shared/PageHero";
 import { SectionHeading } from "@/shared/SectionHeading";
-
-const programs = [
-  {
-    category: "Undergraduate",
-    icon: Stethoscope,
-    title: "MBBS",
-    duration: "5 Years",
-    seats: 150,
-    eligibility: "10+2 (PCB) with minimum 60% and NEET",
-    fee: "INR 120,000 per year",
-    description: "Our flagship medical degree focused on strong academics, clinical rotations, and patient care.",
-  },
-  {
-    category: "Undergraduate",
-    icon: HeartPulse,
-    title: "BDS",
-    duration: "4 Years",
-    seats: 80,
-    eligibility: "10+2 (PCB) with minimum 55% and NEET",
-    fee: "INR 100,000 per year",
-    description: "Dental surgery program with practical training in modern labs and clinics.",
-  },
-  {
-    category: "Undergraduate",
-    icon: Pill,
-    title: "Pharm-D",
-    duration: "5 Years",
-    seats: 100,
-    eligibility: "10+2 (PCB) with minimum 50%",
-    fee: "INR 60,000 per year",
-    description: "Doctor of Pharmacy program for students interested in medication science and patient care.",
-  },
-  {
-    category: "Undergraduate",
-    icon: Activity,
-    title: "DPT",
-    duration: "5 Years",
-    seats: 80,
-    eligibility: "10+2 (PCB) with minimum 50%",
-    fee: "INR 50,000 per year",
-    description: "Physical therapy program covering rehabilitation, movement, and recovery support.",
-  },
-  {
-    category: "Allied Health",
-    icon: FlaskConical,
-    title: "B.Sc Nursing",
-    duration: "4 Years",
-    seats: 100,
-    eligibility: "10+2 (PCB) with minimum 45%",
-    fee: "INR 40,000 per year",
-    description: "Nursing degree with hospital-based training and patient-focused learning.",
-  },
-  {
-    category: "Allied Health",
-    icon: Microscope,
-    title: "B.Sc Medical Lab Technology",
-    duration: "4 Years",
-    seats: 60,
-    eligibility: "10+2 (PCB) with minimum 45%",
-    fee: "INR 35,000 per year",
-    description: "Laboratory science program focused on diagnostics, testing, and research tools.",
-  },
-  {
-    category: "Allied Health",
-    icon: ScanLine,
-    title: "B.Sc Radiology and Imaging",
-    duration: "4 Years",
-    seats: 60,
-    eligibility: "10+2 (PCB) with minimum 45%",
-    fee: "INR 35,000 per year",
-    description: "Imaging program covering X-ray, MRI, CT, and other diagnostic technologies.",
-  },
-  {
-    category: "Pre-Medical",
-    icon: BookMarked,
-    title: "11th and 12th Science",
-    duration: "2 Years",
-    seats: 200,
-    eligibility: "10th science with minimum 60%",
-    fee: "INR 25,000 per year",
-    description: "Foundation program that helps students prepare for medical entrance exams.",
-  },
-];
+import { courses } from "./data";
 
 const careerPaths = [
   {
-    title: "Hospital Practice",
-    description: "Graduates join public and private hospitals across India and abroad.",
+    title: "Teaching and Education",
+    description: "Graduates pursue teaching careers in schools, colleges, and coaching institutes.",
   },
   {
-    title: "Specialization",
-    description: "Many students continue into MD, MS, FCPS, and other advanced studies.",
+    title: "Government Services",
+    description: "Many students prepare for civil services, banking, and administrative roles.",
   },
   {
-    title: "Research and Academia",
-    description: "Students build careers in teaching, medical research, and clinical studies.",
+    title: "Healthcare Support",
+    description: "Pharmacy graduates work in hospitals, clinics, and pharmaceutical companies.",
   },
   {
-    title: "Public Health",
-    description: "Graduates also work with NGOs, government projects, and community health programs.",
+    title: "Research and Development",
+    description: "Science graduates contribute to research labs and academic institutions.",
   },
 ];
 
-const categories = ["All", ...new Set(programs.map((program) => program.category))];
+const iconMap = {
+  Pill,
+  BookOpen,
+  FlaskConical,
+  Home,
+};
 
 function ProgramCard({ program }) {
-  const Icon = program.icon;
+  const Icon = iconMap[program.icon] || BookOpen;
 
   return (
-    <div className="h-full rounded-2xl border border-border bg-card p-7 shadow-card">
+    <Link 
+      href={`/courses/${program.slug}`}
+      className="block h-full rounded-2xl border border-border bg-card p-7 shadow-card transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+    >
       <div className="mb-5 flex items-start justify-between gap-4">
         <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-brand text-primary-foreground">
           <Icon className="h-7 w-7" />
@@ -160,21 +81,14 @@ function ProgramCard({ program }) {
         </p>
       </div>
 
-      <Link href="/admissions" className="mt-5 inline-flex items-center text-sm font-semibold text-primary">
-        Apply for {program.title}
-      </Link>
-    </div>
+      <span className="mt-5 inline-flex items-center text-sm font-semibold text-primary">
+        View Details
+      </span>
+    </Link>
   );
 }
 
 export default function CoursesPage() {
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  const visiblePrograms =
-    activeCategory === "All"
-      ? programs
-      : programs.filter((program) => program.category === activeCategory);
-
   return (
     <>
       <PageHero
@@ -185,25 +99,8 @@ export default function CoursesPage() {
 
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="mb-12 flex flex-wrap justify-center gap-2">
-            {categories.map((category) => (
-              <button
-                key={category}
-                type="button"
-                onClick={() => setActiveCategory(category)}
-                className={
-                  activeCategory === category
-                    ? "rounded-full bg-gradient-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-card"
-                    : "rounded-full bg-secondary px-5 py-2.5 text-sm font-semibold text-foreground"
-                }
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {visiblePrograms.map((program) => (
+            {courses.map((program) => (
               <ProgramCard key={program.title} program={program} />
             ))}
           </div>

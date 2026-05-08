@@ -7,6 +7,7 @@ import { HomePrincipal } from "@/home-components/HomePrincipal";
 import { HomeTestimonials } from "@/home-components/HomeTestimonials";
 import { HomeNews } from "@/home-components/HomeNews";
 import { HomeCTA } from "@/home-components/HomeCTA";
+import { EventsPopup } from "@/shared/EventsPopup";
 
 export default function HomePage() {
   return (
@@ -20,6 +21,7 @@ export default function HomePage() {
       <HomeTestimonials />
       <HomeNews />
       <HomeCTA />
+      <EventsPopup />
     </>
   );
 }
