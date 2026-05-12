@@ -7,6 +7,7 @@ const quickLinks = [
   { href: "/about", label: "About Us" },
   { href: "/courses", label: "Programs" },
   { href: "/events", label: "Events & News" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/blog", label: "Blog" },
   { href: "/admissions", label: "Admissions" },
   { href: "/faculty", label: "Faculty" },
