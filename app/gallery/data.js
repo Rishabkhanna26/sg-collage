@@ -1,5 +1,182 @@
 export const gallerySections = [
   {
+    id: "events",
+    eyebrow: "Campus Life",
+    title: "Events & Celebrations",
+    description: "Annual festivals, cultural nights, sports meets, and milestone celebrations that make SQ more than just a college.",
+    type: "events",
+    subEvents: [
+      {
+        id: "annual-festival",
+        title: "Annual College Festival",
+        description: "Three days of cultural performances, competitions, and guest lectures celebrating the spirit of SQ.",
+        cover: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
+        years: [
+          {
+            label: "2024-25",
+            images: [
+              { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", caption: "Festival Opening Ceremony" },
+              { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", caption: "Cultural Night Performance" },
+              { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80", caption: "Sports Events" },
+              { src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80", caption: "Prize Distribution" },
+            ],
+          },
+          {
+            label: "2023-24",
+            images: [
+              { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", caption: "Festival 2024 Inauguration" },
+              { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80", caption: "Dance Competition" },
+              { src: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80", caption: "Closing Ceremony" },
+            ],
+          },
+          {
+            label: "2022-23",
+            images: [
+              { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", caption: "Festival Theme Reveal" },
+              { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", caption: "Talent Show" },
+            ],
+          },
+        ],
+      },
+      {
+        id: "diwali",
+        title: "Diwali Celebrations",
+        description: "The festival of lights celebrated with rangoli, diyas, cultural programs, and sweets across campus.",
+        cover: "https://images.unsplash.com/photo-1574169208507-84376144848b?w=800&q=80",
+        years: [
+          {
+            label: "2024-25",
+            images: [
+              { src: "https://images.unsplash.com/photo-1574169208507-84376144848b?w=800&q=80", caption: "Rangoli Competition" },
+              { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", caption: "Diya Decoration" },
+              { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", caption: "Cultural Program" },
+              { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80", caption: "Campus Lighting" },
+            ],
+          },
+          {
+            label: "2023-24",
+            images: [
+              { src: "https://images.unsplash.com/photo-1574169208507-84376144848b?w=800&q=80", caption: "Diwali 2023 Rangoli" },
+              { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", caption: "Hostel Decoration" },
+              { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80", caption: "Sweet Distribution" },
+            ],
+          },
+          {
+            label: "2022-23",
+            images: [
+              { src: "https://images.unsplash.com/photo-1574169208507-84376144848b?w=800&q=80", caption: "Diwali Puja" },
+              { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", caption: "Group Photo" },
+            ],
+          },
+        ],
+      },
+      {
+        id: "holi",
+        title: "Holi Celebrations",
+        description: "The festival of colours bringing students together for a vibrant and joyful celebration on campus.",
+        cover: "https://images.unsplash.com/photo-1615751072497-5f5169febe17?w=800&q=80",
+        years: [
+          {
+            label: "2024-25",
+            images: [
+              { src: "https://images.unsplash.com/photo-1615751072497-5f5169febe17?w=800&q=80", caption: "Holi Colour Play" },
+              { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", caption: "Water Balloon Fun" },
+              { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", caption: "Group Celebration" },
+            ],
+          },
+          {
+            label: "2023-24",
+            images: [
+              { src: "https://images.unsplash.com/photo-1615751072497-5f5169febe17?w=800&q=80", caption: "Holi 2024" },
+              { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80", caption: "Faculty Joins In" },
+            ],
+          },
+        ],
+      },
+      {
+        id: "eid",
+        title: "Eid Celebrations",
+        description: "Eid festivities celebrated with warmth, shared meals, and cultural programs bringing the campus community together.",
+        cover: "https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=800&q=80",
+        years: [
+          {
+            label: "2024-25",
+            images: [
+              { src: "https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=800&q=80", caption: "Eid Gathering" },
+              { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", caption: "Shared Feast" },
+              { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", caption: "Cultural Program" },
+              { src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80", caption: "Group Photo" },
+            ],
+          },
+          {
+            label: "2023-24",
+            images: [
+              { src: "https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=800&q=80", caption: "Eid 2024 Celebration" },
+              { src: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80", caption: "Decoration" },
+            ],
+          },
+        ],
+      },
+      {
+        id: "sports-day",
+        title: "Sports Day",
+        description: "Annual inter-department sports championship featuring cricket, football, basketball, and athletics.",
+        cover: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80",
+        years: [
+          {
+            label: "2024-25",
+            images: [
+              { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80", caption: "Opening March" },
+              { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", caption: "Cricket Finals" },
+              { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", caption: "Trophy Ceremony" },
+              { src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80", caption: "Athletics Track" },
+            ],
+          },
+          {
+            label: "2023-24",
+            images: [
+              { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80", caption: "Football Match" },
+              { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80", caption: "Basketball Finals" },
+              { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", caption: "Winners Podium" },
+            ],
+          },
+          {
+            label: "2022-23",
+            images: [
+              { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80", caption: "Sports Day 2023" },
+              { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", caption: "Relay Race" },
+            ],
+          },
+        ],
+      },
+      {
+        id: "convocation",
+        title: "Convocation Ceremony",
+        description: "The most important day for our graduates — receiving their degrees and celebrating years of hard work.",
+        cover: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80",
+        years: [
+          {
+            label: "2024-25",
+            images: [
+              { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", caption: "Degree Distribution" },
+              { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", caption: "Procession" },
+              { src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80", caption: "Gold Medal Winners" },
+              { src: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80", caption: "Chief Guest Address" },
+            ],
+          },
+          {
+            label: "2023-24",
+            images: [
+              { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", caption: "Convocation 2024" },
+              { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80", caption: "Faculty on Stage" },
+              { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80", caption: "Graduates Celebration" },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: "medical-science",
     eyebrow: "Department",
     title: "Medical Science",
@@ -45,53 +222,6 @@ export const gallerySections = [
           { src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80", caption: "Simulation Lab" },
           { src: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&q=80", caption: "Lab Inauguration" },
           { src: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=800&q=80", caption: "Batch Photo" },
-        ],
-      },
-    ],
-  },
-  {
-    id: "events",
-    eyebrow: "Campus Life",
-    title: "Events & Celebrations",
-    description: "Annual festivals, cultural nights, sports meets, and milestone celebrations that make SQ more than just a college.",
-    years: [
-      {
-        label: "2024-25",
-        images: [
-          { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", caption: "Annual College Festival" },
-          { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80", caption: "Career Guidance Seminar" },
-          { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80", caption: "Sports Championship" },
-          { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", caption: "Convocation Ceremony" },
-          { src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80", caption: "Placement Drive" },
-          { src: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80", caption: "MoU Signing Ceremony" },
-        ],
-      },
-      {
-        label: "2023-24",
-        images: [
-          { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", caption: "Cultural Night 2024" },
-          { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80", caption: "Cricket Tournament" },
-          { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", caption: "Graduation Day" },
-          { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80", caption: "Health Awareness Camp" },
-          { src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80", caption: "Alumni Meet" },
-          { src: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80", caption: "Industry Visit" },
-        ],
-      },
-      {
-        label: "2022-23",
-        images: [
-          { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", caption: "Fresher's Welcome" },
-          { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80", caption: "Football Finals" },
-          { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", caption: "Prize Distribution" },
-          { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80", caption: "NSS Camp" },
-        ],
-      },
-      {
-        label: "2021-22",
-        images: [
-          { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", caption: "Online Convocation" },
-          { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", caption: "Virtual Seminar" },
-          { src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80", caption: "Campus Reopening" },
         ],
       },
     ],
@@ -178,3 +308,8 @@ export const gallerySections = [
     ],
   },
 ];
+
+export function getSubEventById(eventId) {
+  const eventsSection = gallerySections.find((s) => s.id === "events");
+  return eventsSection?.subEvents?.find((e) => e.id === eventId) ?? null;
+}
