@@ -309,7 +309,11 @@ export const gallerySections = [
   },
 ];
 
+export function getEventsSection() {
+  return gallerySections.find((section) => section.id === "events") ?? null;
+}
+
 export function getSubEventById(eventId) {
-  const eventsSection = gallerySections.find((s) => s.id === "events");
+  const eventsSection = getEventsSection();
   return eventsSection?.subEvents?.find((e) => e.id === eventId) ?? null;
 }

@@ -14,7 +14,7 @@ export default function GalleryPage() {
 
       {gallerySections.map((section, i) =>
         section.type === "events" ? (
-          <EventsSection key={section.id} section={section} />
+          <EventsSection key={section.id} section={section} limit={3} showViewMore />
         ) : (
           <GallerySection key={section.id} section={section} alternate={i % 2 !== 0} />
         )

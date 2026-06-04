@@ -78,11 +78,11 @@ export function EventGalleryClient({ event }) {
     <>
       <div className="container mx-auto px-4 lg:px-8 pt-8">
         <Link
-          href="/gallery"
+          href="/gallery/events"
           className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
         >
           <ArrowLeft className="h-4 w-4" />
-          Back to Gallery
+          Back to All Events
         </Link>
       </div>
 

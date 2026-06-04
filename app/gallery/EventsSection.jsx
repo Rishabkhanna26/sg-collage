@@ -3,11 +3,13 @@
 import Link from "next/link";
 import { ArrowRight, Images } from "lucide-react";
 
-export function EventsSection({ section }) {
+export function EventsSection({ section, limit = section.subEvents.length, showViewMore = false }) {
   const totalImages = section.subEvents.reduce(
     (sum, e) => sum + e.years.reduce((s, y) => s + y.images.length, 0),
     0
   );
+  const visibleEvents = section.subEvents.slice(0, limit);
+  const hasMoreEvents = visibleEvents.length < section.subEvents.length;
 
   return (
     <section className="py-16 md:py-24">
@@ -29,7 +31,7 @@ export function EventsSection({ section }) {
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {section.subEvents.map((event) => {
+          {visibleEvents.map((event) => {
             const eventTotal = event.years.reduce((s, y) => s + y.images.length, 0);
             const latestYear = event.years[0];
             const previewImages = latestYear.images.slice(0, 4);
@@ -73,6 +75,18 @@ export function EventsSection({ section }) {
             );
           })}
         </div>
+
+        {showViewMore && hasMoreEvents && (
+          <div className="mt-8 flex justify-center">
+            <Link
+              href="/gallery/events"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground shadow-sm transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground"
+            >
+              View More Events
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
